@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>趣博</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <h1><?php echo $data; ?></h1>
+
+  <header class="header">
+    <div class="header-content">
+      <div class="header-content">
+        <h1 class="logo"><span>趣</span>博客</h1>
+        <div class="header-search">
+          <input type="text" class="search-content" />
+          <img src="img/search.svg" class="search-icon" alt="搜索" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="#">文章</a></li>
+      <li><a href="#">学习</a></li>
+      <li><a href="#">工具</a></li>
+      <li><a href="#">资源</a></li>
+      <li><a href="#">留言</a></li>
+    </ul>
+  </nav>
+
+
+
+  <!-- scripts -->
+  <script src="js/jquery.min.js" charset="utf-8"></script>
+  <script src="js/base.js" charset="utf-8"></script>
+  <script src="js/index.js" charset="utf-8"></script>
+  <!-- scripts -->
 </body>
 </html>
