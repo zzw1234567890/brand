@@ -1,2 +1,31 @@
 <!--pages/food/food.wxml-->
-<text>pages/food/food.wxml</text>
+<view class="contain">
+
+  <view class='search'>
+    <view class="searchItem">
+      <image class='icon' src='../../img/search2.png' />
+      <input class='s-lost' type='text' disabled placeholder='请输入关键词搜索' placeholder-class="placeholder" bindtap='search'></input>
+    </view>
+  </view>
+
+  <view class="aside flex flex-direction-col">
+    <block wx:for="{{navList}}" wx:key="id">
+      <view class="nav-item {{curNav==item.id?'selected':''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">
+        <image class="tu" src="{{item.pic}}" />
+        <text class="zi">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="content">
+    <block wx:for="{{dishesList[curIndex]}}" wx:key="*this">
+      <view class="box1" bindtap='classify'>
+        <view class="pic">
+          <image class="pic" src='{{item.pic}}'></image>
+        </view>
+        <text class="text">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+</view>
