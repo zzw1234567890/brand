@@ -12,6 +12,7 @@ Page({
       { "pic": "../../img/logo4.jpg", "brandName": "Guerlain娇兰", },
     ],
     progress:80,
+    problem:"下面哪个是法国的美妆品牌？",
   },
 
   /**

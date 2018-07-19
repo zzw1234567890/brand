@@ -213,31 +213,48 @@ Page({
   //大分类跳转
   home: function (e) {
     var navNumber = e.currentTarget.dataset.id;
-    if (navNumber == 1) {
-      wx.navigateTo({
-        url: '../home/home'
-      })
-    }
-    if (navNumber == 2) {
-      wx.navigateTo({
-        url: '../offic/offic'
-      })
-    }
-    if (navNumber == 3) {
-      wx.navigateTo({
-        url: '../wear/wear'
-      })
-    }
-    if (navNumber == 4) {
-      wx.navigateTo({
-        url: '../food/food'
-      })
-    }
-    if (navNumber == 5) {
-      wx.navigateTo({
-        url: '../daily/daily'
-      })
-    }
+    // console.log(navNumber)
+
+    wx.request({
+      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+      method: 'POST',
+      data: {
+        first_id: navNumber
+      },
+      header: { "content-type": "application/x-www-form-urlencoded" },
+      success: function (e) {
+        // console.log(e)
+        wx.navigateTo({
+          url: '../home/home'
+        })
+      }
+    })
+
+    // if (navNumber == 1) {
+    //   wx.navigateTo({
+    //     url: '../home/home'
+    //   })
+    // }
+    // if (navNumber == 2) {
+    //   wx.navigateTo({
+    //     url: '../offic/offic'
+    //   })
+    // }
+    // if (navNumber == 3) {
+    //   wx.navigateTo({
+    //     url: '../wear/wear'
+    //   })
+    // }
+    // if (navNumber == 4) {
+    //   wx.navigateTo({
+    //     url: '../food/food'
+    //   })
+    // }
+    // if (navNumber == 6) {
+    //   wx.navigateTo({
+    //     url: '../daily/daily'
+    //   })
+    // }
   },
 
 
