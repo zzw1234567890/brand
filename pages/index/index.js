@@ -24,13 +24,13 @@ Page({
       { url: '/img/brand5.jpg' },
       { url: '/img/brand6.jpg' },
     ],
-    nav: [
-      { "img": "../../img/pic.png", "name": "建材家居" },
-      { "img": "../../img/pic2.png", "name": "建材家居" },
-      { "img": "../../img/pic3.png", "name": "建材家居" },
-      { "img": "../../img/pic4.png", "name": "建材家居" },
-      { "img": "../../img/pic5.png", "name": "建材家居" },
-    ],
+    // nav: [
+    //   { "img": "../../img/pic.png", "name": "建材家居" },
+    //   { "img": "../../img/pic2.png", "name": "建材家居" },
+    //   { "img": "../../img/pic3.png", "name": "建材家居" },
+    //   { "img": "../../img/pic4.png", "name": "建材家居" },
+    //   { "img": "../../img/pic5.png", "name": "建材家居" },
+    // ],
     brand: [{ "pic": "http://bpic.588ku.com/element_origin_min_pic/16/10/30/528aa13209e86d5d9839890967a6b9c1.jpg", "brandName": "CHANEL 香奈儿", "companyName": "(香奈儿(中国)贸易有限公司)", "brandDetail": "(400-120-0500，始于1910年法国,以双C标志/菱形格纹/山茶花为品牌标志,No.5香水/2.55手袋/小黑裙/双色鞋是时尚界永恒经典,法国香奈儿(CHANEL)公司)", "hotPic": "../../img/hot1.png", "hot": "热度1", "age": "24", "country": "法国", "paioshu": "7223", },
     { "pic": "../../img/logo2.jpg", "brandName": "Dior 迪奥", "companyName": "克丽丝汀迪奥商业(上海)有限公司", "brandDetail": "(400-120-0500，始于1910年法国,以双C标志/菱形格纹/山茶花为品牌标志,No.5香水/2.55手袋/小黑裙/双色鞋是时尚界永恒经典,法国香奈儿(CHANEL)公司)", "hotPic": "../../img/hot2.png", "hot": "热度2", "age": "24", "country": "法国", "paioshu": "5827", },
     { "pic": "../../img/logo3.jpg", "brandName": "LANCOME兰蔻", "companyName": "欧莱雅(中国)有限公司", "brandDetail": "(400-120-0500，始于1910年法国,以双C标志/菱形格纹/山茶花为品牌标志,No.5香水/2.55手袋/小黑裙/双色鞋是时尚界永恒经典,法国香奈儿(CHANEL)公司)", "hotPic": "../../img/hot3.png", "hot": "热度3", "age": "24", "country": "法国", "paioshu": "5603", },
@@ -213,31 +213,23 @@ Page({
   //大分类跳转
   home: function (e) {
     var navNumber = e.currentTarget.dataset.id;
-    if (navNumber == 1) {
-      wx.navigateTo({
-        url: '../home/home'
-      })
-    }
-    if (navNumber == 2) {
-      wx.navigateTo({
-        url: '../offic/offic'
-      })
-    }
-    if (navNumber == 3) {
-      wx.navigateTo({
-        url: '../wear/wear'
-      })
-    }
-    if (navNumber == 4) {
-      wx.navigateTo({
-        url: '../food/food'
-      })
-    }
-    if (navNumber == 6) {
-      wx.navigateTo({
-        url: '../daily/daily'
-      })
-    }
+    wx.request({
+      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+      method: 'POST',
+      data: {
+        first_id: navNumber
+      },
+      header: { "content-type": "application/x-www-form-urlencoded" },
+      success: function (e) {
+        // console.log(e)
+        wx.navigateTo({
+          url: '../home/home'
+        })
+      }
+    })
+
+ 
+
   },
 
 
