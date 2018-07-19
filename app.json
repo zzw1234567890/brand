@@ -10,7 +10,8 @@
     "pages/wear/wear",
     "pages/food/food",
     "pages/daily/daily",
-    "pages/text/text"
+    "pages/text/text",
+    "pages/paih/paih"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,81 @@
+<view class="container">
+
+  <view class="btn">
+    <button class="one {{bg?'bg' : ''}}" bindtap='showButton'>Top10</button>
+    <button class="two {{bg?'' : 'bg'}}" bindtap='showButton1'>投票榜</button>
+  </view>
+
+  <!-- top10开始-->
+  <view class="top10 {{showView?'show':'hide'}}">
+    <view class="top" wx:for="{{brand}}" wx:for-index="index" wx:key='*this'>
+      <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
+      <view class="you">
+        <view class="title">
+          <text class="title">{{item.title}}</text>
+          <image class="trend" src="{{item.trend}}"></image>
+          <button class="guanzhu" bindtap='btnClick'>
+            <text class='gz' hidden='{{sview}}'>+ 关注</text>
+            <text class='gz' hidden='{{view}}'>已关注</text>
+          </button>
+        </view>
+        <view class="age">
+          <text class="age">品牌年龄：{{item.age}}</text>
+        </view>
+        <view class="nation">
+          <text class="nation">所属地址：{{item.nation}}</text>
+        </view>
+        <view class="biao">
+
+
+          <button class="middle">
+            <image class='share' src='/img/share.png'></image>
+            <text class='t-share'>分享</text>
+          </button>
+
+          <button class="tou">
+            <image class='share' src='/img/tou.png'></image>
+            <text class='toup'>投票</text>
+          </button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!--投票榜开始  -->
+  <view class="top10 {{showView1?'show':'hide'}}">
+    <view class="top" wx:for="{{brand1}}" wx:for-index="index" wx:key='*this'>
+      <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
+      <view class="you">
+        <view class="title">
+          <text class="title">{{item.title}}</text>
+          <image class="trend" src="{{item.trend}}"></image>
+          <button class="guanzhu" bindtap='btnClick'>
+            <text class='gz' hidden='{{sview}}'>+ 关注</text>
+            <text class='gz' hidden='{{view}}'>已关注</text>
+          </button>
+        </view>
+        <view class="age">
+          <text class="age">品牌年龄：{{item.age}}</text>
+        </view>
+        <view class="nation">
+          <text class="nation">所属地址：{{item.nation}}</text>
+        </view>
+        <view class="biao">
+
+
+          <button class="middle">
+            <image class='share' src='/img/share.png'></image>
+            <text class='t-share'>分享</text>
+          </button>
+
+          <button class="tou">
+            <image class='share' src='/img/tou.png'></image>
+            <text class='toup'>投票</text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
