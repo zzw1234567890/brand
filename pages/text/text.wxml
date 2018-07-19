@@ -14,11 +14,11 @@
     <view class='text'>
       <view class='top'>
         <view class='qus'>
-          <text class='detail'>下面哪个是法国的美妆品牌？</text>
+          <text class='detail'>{{problem}}</text>
         </view>
       </view>
       <view class='content'>
-        <view class='area' wx:for='{{area}}' wx:key='*this'>
+        <view class='area' wx:for='{{area}}' wx:key='*this' bindtap=''>
           <view class='areaPic'>
             <image class='pic' src='{{item.pic}}'></image>
           </view>

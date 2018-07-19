@@ -1,53 +1,103 @@
-/* pages/my/my.wxss */
-page{
-background: none;
+.mainFrame {
+  margin-top: 0rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0px solid #ebebeb;
+  
 }
-.detailTopTextCon{
-width: 680rpx;
-margin: 0 auto;
-margin-top: 370rpx;
-position: relative;
+ 
+.container {
+height: 1135rpx;
+  padding-top: 0px;
+background: #b3d4db
 }
-.detailTopText{
-color: black;
-position: absolute;
+ 
+.icon_right{
+  height: 30px;
+  width: 30px;
+   padding-right: 60rpx;
+ 
 }
-.detailTopText1{
-margin-left: 271rpx;
-margin-top: 72rpx;
-font-size: 84rpx;
+.icon_left{
+    height: 30px;
+  width: 30px;
+    padding-left: 60rpx;
 }
-.detailTopText2{
-margin-left: 217rpx;
-font-size: 40rpx;
+.vol-swiper-item {
+ 
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
-.detailTopText3{
-margin-left: 91rpx;
-margin-top: 60rpx;
-font-size: 29rpx;
+ 
+.title {
+ 
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: #f00;
 }
-.detailTopText4{
-margin-left: 432rpx;
-margin-top: 16rpx;
-font-size: 57rpx;
+ 
+.time {
+  font-size: 22rpx;
+  text-align: right;
+  color: #ccc;
 }
-.detailTopText5{
-margin-left: 126rpx;
-margin-top: 117rpx;
-font-size: 37rpx;
+ 
+.vol-card {
+  /*parent layout  and  this inner padding*/
+  padding: 20rpx;
+  height: 965rpx;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #c0c0c0;
+  background: #fff;
+  margin-top: 0px;
 }
-.detailTopText6{
-margin-left: 459rpx;
-margin-top: 95rpx;
-font-size: 47rpx;
+.vol-swiper {
+  height: 100%;
 }
-.detailTopText7{
-margin-left: 82rpx;
-margin-top: 175rpx;
-font-size: 47rpx;
+ 
+.vol-picture {
+  width: 100%;
 }
-.detailTopText8{
-margin-left: 341rpx;
-margin-top: 177rpx;
-font-size: 43rpx;
+.vol-meta-title {
+  margin-top: 5px;
+  text-align: center;
+  padding: 10rpx 5rpx;
+  font-size: 17px;
+  color: #000;
+  font-family: 'KaiTi';
+}
+ 
+.vol-meta-time {
+  padding: 10rpx 5rpx;
+  font-size: 12px;
+  padding-right: 5px;
+  color: #888;
+}
+ 
+ 
+.vol-content {
+  margin-top: 15rpx;
+  padding: 0 5rpx;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'KaiTi';
+  color: #9c9c9c;
+}
+ 
+.vol-content-text {
+  margin-top: 5px;
+  width: 100%;
+  min-height: 200rpx;
+  display: inline-block;
+  text-indent: 2em;
+}
+ 
+.vol-makettime {
+  font-size: 13px;
+  color: #888;
+  text-align: right;
 }
