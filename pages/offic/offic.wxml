@@ -1,0 +1,2 @@
+<!--pages/offic/offic.wxml-->
+<progress percent="{{progress}}" show-info="true" color="red" stroke-width="50" activeColor="green" backgroundColor="#ccc" />

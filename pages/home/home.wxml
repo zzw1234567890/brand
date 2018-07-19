@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+ <!-- 动画 -->
+  <block wx:if="{{donghua}}">
+  <view class='donghua'>
+    <image bindtap='hua' style='left:{{left1}}px; width: 20px;height: 20px;' animation="{{animationData1}}" class='love' src='../../img/move.png'></image>
+    <image bindtap='hua' style='left:{{left2}}px;width: 20px;height: 20px;' animation="{{animationData2}}" class='love' src='../../img/move.png'></image>
+    <image bindtap='hua' style='left:{{left3}}px;width: 20px;height: 20px;' animation="{{animationData3}}" class='love' src='../../img/move.png'></image>
+    <image bindtap='hua' style='left:{{left4}}px;width: 20px;height: 20px;' animation="{{animationData4}}" class='love' src='../../img/move.png'></image>
+    <image bindtap='hua' style='left:{{left5}}px;width: 20px;height: 20px;' animation="{{animationData5}}" class='love' src='../../img/move.png'></image>
+    <image bindtap='hua' style='left:{{left6}}px;width: 20px;height: 20px;' animation="{{animationData6}}" class='love' src='../../img/move.png'></image>
+    </view>
+  </block>
+

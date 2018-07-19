@@ -1,0 +1,40 @@
+<view class="container">
+  <view class='progress'>
+  </view>
+  <view class='main'>
+    <view class='header'>
+      <view class='pic'>
+        <image class='icon' src='../../img/header.jpg'></image>
+      </view>
+      <view class='title'>
+        <text class='hTitle'>主银，你来啦~</text>
+      </view>
+    </view>
+    <view class='content'>
+      <view class='intro'>
+        <text class='thing'>品牌 Top 答题测试</text>
+        <text class='thing'>测试你对品牌的认识程度</text>
+        <text class='thing'>还可以召唤小伙伴一起来PK哦</text>
+        <text class='thing'>快来试试吧~</text>
+      </view>
+      <view class='btnArea'>
+        <button type='button' class='btn' bindtap='text'>点击测试</button>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='foot'>
+      <view class='fArea'>
+        <image class='f-pic' src='../../img/move.png'></image>
+      </view>
+      <view class='f-main'>
+        <text class='sthing other'>您已参与测试</text>
+        <text class='sthing others'>{{done}}次</text>
+        <text class='sthing'>测试完可以保存结果哦~</text>
+      </view>
+      <view class='f-btn'>
+      <button type='button' class='fBtn' open-type="share">邀请朋友</button>
+      </view>
+    </view>
+  </view>
+</view>

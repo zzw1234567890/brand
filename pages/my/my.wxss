@@ -1,0 +1,53 @@
+/* pages/my/my.wxss */
+page{
+background: none;
+}
+.detailTopTextCon{
+width: 680rpx;
+margin: 0 auto;
+margin-top: 370rpx;
+position: relative;
+}
+.detailTopText{
+color: black;
+position: absolute;
+}
+.detailTopText1{
+margin-left: 271rpx;
+margin-top: 72rpx;
+font-size: 84rpx;
+}
+.detailTopText2{
+margin-left: 217rpx;
+font-size: 40rpx;
+}
+.detailTopText3{
+margin-left: 91rpx;
+margin-top: 60rpx;
+font-size: 29rpx;
+}
+.detailTopText4{
+margin-left: 432rpx;
+margin-top: 16rpx;
+font-size: 57rpx;
+}
+.detailTopText5{
+margin-left: 126rpx;
+margin-top: 117rpx;
+font-size: 37rpx;
+}
+.detailTopText6{
+margin-left: 459rpx;
+margin-top: 95rpx;
+font-size: 47rpx;
+}
+.detailTopText7{
+margin-left: 82rpx;
+margin-top: 175rpx;
+font-size: 47rpx;
+}
+.detailTopText8{
+margin-left: 341rpx;
+margin-top: 177rpx;
+font-size: 43rpx;
+}

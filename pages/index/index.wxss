@@ -1,21 +1,527 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  /* background: #166fb4 */
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.searchContain {
+  height: 100rpx;
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.search {
+  height: 60rpx;
+  width: 700rpx;
+  margin: 20rpx auto;
+  background: white;
+  position: relative;
+  border-radius: 10rpx;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 6rpx;
+  margin-left: 10rpx;
+  position: absolute;
+}
+
+.searchItem {
+  /* background: green;  */
+  height: 60rpx;
+  width: 640rpx;
+  padding-left: 60rpx;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  /* padding-left: 50px;   */
+  text-align: center;
+}
+
+.navbar {
+  height: 200rpx;
+  width: 100%;
+  /* background: yellowgreen; */
+}
+
+.nav {
+  height: 200rpx;
+  width: 100%;
+  /* margin: 20rpx auto; */
+  background: #fff;
+}
+
+.area {
+  width: 120rpx;
+  height: 200rpx;
+  /* margin-left: 0px; */
+  margin: 20rpx 0 20rpx 25rpx;
+  float: left;
+  /* background: rebeccapurple; */
+}
+
+.img {
+  width: 120rpx;
+  height: 120rpx;
+  /* background: yellow;  */
+}
+
+.brandPic {
+  width: 120rpx;
+  height: 120rpx;
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.tex {
+  width: 160rpx;
+  height: 40rpx;
+  display: block;
+  text-align: left;
+  line-height: 40rpx;
+  /* background: red;    */
 }
 
-.usermotto {
-  margin-top: 200px;
+.brangName {
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.switch {
+  height: 300rpx;
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.swiper {
+  width: 90%;
+  height: 240rpx;
+  margin: 30rpx 5%;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.info {
+  height: 80rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.infoPush {
+  height: 80rpx;
+  width: 100%;
+  /* color: #166fb4 *//* background: red; */
+}
+
+.infoIcon {
+  height: 80rpx;
+  width: 10%;
+  float: left;
+  /* background: rebeccapurple; */
+}
+
+.infoLeft {
+  height: 40rpx;
+  width: 40rpx;
+  margin: 20rpx 0 20rpx 20rpx;
+  /* background: rebeccapurple;  */
+}
+
+.swiper_container {
+  height: 80rpx;
+  width: 80%;
+  float: left;
+  /* background: yellow; */
+}
+
+.swiper_item {
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  color: #444;
+  text-align: left;
+  display: block;
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 4rpx;
+}
+
+.infoIcon2 {
+  height: 80rpx;
+  width: 10%;
+  float: left;
+  /* background: rebeccapurple; */
+}
+
+.infoRight {
+  height: 40rpx;
+  width: 40rpx;
+  margin: 20rpx 0 20rpx 20rpx;
+  /* background: rebeccapurple;  */
+}
+
+.content {
+  height: auto;
+  width: 100%;
+  background: #f6f6f6;
+  margin-top: 20rpx;
+}
+
+.header {
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+}
+
+.title {
+  height: 60rpx;
+  /* background: rebeccapurple; */
+  font-size: 32rpx;
+  /* font-weight: bold; */
+  color: #166fb4;
+  padding-left: 40rpx;
+}
+
+.mian {
+  width: 98%;
+  height: 240rpx;
+  margin: 20rpx auto;
+  /* border: 1px solid #ccc; */
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  background: #fff;
+}
+
+.logo {
+  width: 30%;
+  height: 200rpx;
+  float: left;
+  border: 1px solid #ccc;
+  margin: 20rpx 10rpx 20rpx 10rpx;
+  /* float: left; *//* background: yellowgreen; */
+}
+
+.logoPic {
+  width: 100%;
+  height: 200rpx;
+}
+
+.brandMain {
+  width: 66%;
+  height: 240rpx;
+  float: left;
+  /* background: yellow; */
+}
+
+.top {
+  width: 100%;
+  height: 60rpx;
+  /* background: rebeccapurple; */
+}
+
+.leftName {
+  width: 50%;
+  height: 60rpx;
+  font-weight: bold;
+  /* background: red; */
+  float: left;
+}
+
+.brandName {
+  width: 100%;
+  height: 60rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #166fb4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 60rpx;
+}
+
+.rightName {
+  width: 50%;
+  height: 60rpx;
+  /* background: pink; */
+  float: left;
+  letter-spacing: 0;
+}
+
+.companyName {
+  width: 100%;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #166fb4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  line-height: 60rpx;
+}
+
+.middle {
+  width: 100%;
+  height: 120rpx;
+  /* background: blue; */
+}
+
+.detail {
+  width: 100%;
+  height: 120rpx;
+}
+
+.brandDetail {
+  display: block;
+  width: 100%;
+  height: 120rpx;
+  /* background: lavender; *//* line-height: 0; *//* line-height: 100px; */
+  font-size: 28rpx;
+  letter-spacing: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: #444;
+}
+
+.bottom {
+  width: 100%;
+  height: 60rpx;
+  /* background: palevioletred; */
+}
+
+.bottomLeft {
+  width: 160rpx;
+  height: 60rpx;
+  /* background: rebeccapurple; */
+  float: left;
+}
+
+.b-pic {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  float: left;
+}
+
+.text {
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: block;
+  font-size: 24rpx;
+  float: left;
+  color: #166fb4;
+  /* background: yellow */
+}
+
+.zan {
+  color: #df6868;
+}
+
+.texts {
+  text-align: left;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: block;
+  font-size: 24rpx;
+  /* background: yellow; */
+}
+
+.bottomMiddle {
+  width: 120rpx;
+  height: 60rpx;
+  background: none;
+  /* background: red; */
+  float: left;
+  margin: 0 40rpx 0 0;
+  padding: 0;
+}
+
+.bottomMiddle::after {
+  border: none;
+}
+
+.bottomRight {
+  width: 160rpx;
+  height: 60rpx;
+  /* background: yellow; */
+  float: left;
+}
+
+.s-float {
+  width: 90%;
+  height: 620rpx;
+  top: 20%;
+  left: 5%;
+  position: fixed;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  border-radius: 10rpx;
+  /* background: yellow; */
+  z-index: 9999;
+}
+
+.showview {
+  width: 100%;
+  height: 620rpx;
+  background: #fff;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  border-radius: 10rpx;
+}
+
+.s-top {
+  width: 100%;
+  height: 220rpx;
+  background: #f6f6f6;
+}
+
+.s-logo {
+  width: 30%;
+  height: 200rpx;
+  /* background: rebeccapurple; */
+  margin: 10rpx;
+  border: 2rpx solid #ccc;
+  float: left;
+}
+
+.s-pic {
+  width: 100%;
+  height: 200rpx;
+}
+
+.s-detail {
+  width: 65%;
+  height: 220rpx;
+  /* background: red; */
+  float: left;
+}
+
+.s-name {
+  width: 100%;
+  height: 60rpx;
+}
+
+.sName {
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 2rpx;
+  display: block;
+  /* background: yellow; */
+  color: #166fb4;
+  font-size: 36rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.s-company {
+  width: 100%;
+  height: 60rpx;
+  /* background: lavender; */
+}
+
+.sCompany {
+  width: 100%;
+  height: 60rpx;
+  /* display: block; */
+  color: #166fb4;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  /* text-align: center; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.s-other {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 0;
+  /* background: orange; */
+}
+
+.s-left {
+  width: 100%;
+  height: 40rpx;
+  /* float: left; */
+}
+
+.other {
+  width: 100%;
+  height: 40rpx;
+  display: block;
+  line-height: 40rpx;
+  color: #666;
+  font-size: 28rpx;
+  /* text-align: center; *//* letter-spacing: 1px; */
+}
+
+.s-right {
+  width: 100%;
+  height: 40rpx;
+  /* float: left; */
+}
+
+.s-middle {
+  width: 90%;
+  height: 400rpx;
+  background: #fff;
+  /* margin-left: 5%; */
+  border: 1px solid #f6f6f6;
+  border-radius: 10rpx;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  position: relative;
+  /* background: rgb(f, f, f); */
+  margin: 20rpx 5%;
+  /* background: rebeccapurple; */
+}
+
+.s-paper {
+  color: #666;
+  font-size: 28rpx;
+  width: 90%;
+  height: 340rpx;
+  top: 10rpx;
+  left: 5%;
+  display: block-inline;
+  padding-left: 0rpx;
+  text-align: left;
+  position: absolute;
+  overflow: auto;
+  /* background: yellow; */
+}
+
+.mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* overflow: hidden; */
+  z-index: 222;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
 }

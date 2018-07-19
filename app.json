@@ -1,12 +1,45 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/main/main",
+    "pages/search/search",
+    "pages/home/home",
+    "pages/offic/offic",
+    "pages/wear/wear",
+    "pages/food/food",
+    "pages/daily/daily",
+    "pages/text/text"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#166FB4",
+    "navigationBarTitleText": "品牌 Top",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#166FB4",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/index2.png",
+        "selectedIconPath": "img/index.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "测试",
+        "iconPath": "img/move2.png",
+        "selectedIconPath": "img/move.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我",
+        "iconPath": "img/my2.png",
+        "selectedIconPath": "img/my.png"
+      }
+    ]
   }
 }

@@ -1,0 +1,197 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  /* background: #166fb4 */
+}
+
+.progress {
+  width: 100%;
+  height: 30%;
+  /* background: linear-gradient(red, blue); *//* 线性渐变 - 从上到下（默认情况下）   *//* background: linear-gradient(to right, red , blue); *//* 线性渐变 - 从左到右 *//* background: linear-gradient(to bottom right, red , blue); *//* 线性渐变 - 对角 *//* background: linear-gradient(120deg, red, blue); *//* 带有指定的角度的线性渐变 */
+  background: linear-gradient(#166fb4, blue, lightblue);
+  /* 带有多个颜色结点的从上到下的线性渐变 *//* background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);  *//* background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); *//* background: repeating-linear-gradient(#166fb4, lightblue 10%, blue 20%);  *//* background: radial-gradient(#166fb4, lightblue, blue);  *//* background: radial-gradient(#166fb4 5%, lightblue 15%, blue 60%);  *//* background: radial-gradient(circle, #166fb4, lightblue, blue);  *//* background: repeating-radial-gradient(#166fb4, lightblue 10%, blue 15%); *//* background: #f6f6f6; */
+}
+
+.main {
+  width: 85%;
+  height: 60%;
+  top: 15%;
+  position: fixed;
+  flex-direction: column;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
+  background: #fff;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  border-radius: 10rpx;
+}
+
+.header {
+  width: 100%;
+  height: 160rpx;
+  /* background: rgba(0, 0, 0,0.3) */
+}
+
+.pic {
+  width: 160rpx;
+  height: 160rpx;
+  /* background: pink; */
+  float: left;
+}
+
+.icon {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+
+.title {
+  width: 74%;
+  height: 160rpx;
+  line-height: 160rpx;
+  /* background: yellow; */
+  float: left;
+  text-align: center;
+}
+
+.hTitle {
+  font-size: 36rpx;
+  color: #166fb4;
+  letter-spacing: 4rpx;
+}
+
+.content {
+  width: 100%;
+  height: 500rpx;
+  /* background: yellow; */
+}
+
+.intro {
+  width: 100%;
+  height: 360rpx;
+}
+
+.thing {
+  width: 100%;
+  height: 80rpx;
+  display: block;
+  line-height: 40px;
+  /* background: lavender; */
+  font-size: 32rpx;
+  float: left;
+  text-align: center;
+  color: #444;
+}
+
+.btnArea {
+  width: 100%;
+  height: 200rpx;
+  /* background: lavender; */
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  border-radius: 10rpx;
+}
+
+.btn {
+  width: 80%;
+  height: 80rpx;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: #166fb4;
+  /* opacity: 0.8; */
+  border-radius: 40rpx;
+  color: #fff;
+  line-height: 80rpx;
+  letter-spacing: 4rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 24%;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.foot {
+  width: 90%;
+  height: 60%;
+  top: 25%;
+  margin: 0 5%;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  /* box-sizing: 3px; */
+  border-radius: 10rpx;
+}
+
+.fArea{
+  width: 30%;
+  height: 100%;
+  /* background: pink; */
+  float: left;
+}
+.f-pic{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 24rpx 40rpx;
+}
+
+.f-main{
+   width: 40%;
+  height: 100%;
+  /* background: yellow; */
+  float: left;  
+}
+
+.sthing{
+ width: 100%;
+  height: 40rpx;
+  display: block;
+  line-height: 40rpx;
+  /* background: lavender; */
+  font-size: 24rpx;
+  /* float: left; */
+  text-align: left;
+  color: #444;
+  margin-top: 10rpx;
+}
+.other{
+  color: #666;
+  font-size: 32rpx;  
+}
+.others{
+  color: #166fb4;
+  font-size: 36rpx;  
+}
+
+.f-btn{
+   width: 30%;
+  height: 100%;
+  background: #fff;
+  float: left;  
+  position: relative;
+}
+.fBtn{
+  width: 90%;
+  height: 80rpx;
+  display: block;
+  position: absolute;
+  font-size: 28rpx;
+  top: 30%;
+  left: 5%;
+  background: #166fb4;
+  /* opacity: 0.8; */
+  border-radius: 40rpx;
+  color: #fff;
+  line-height: 80rpx;
+  letter-spacing: 2rpx;
+}

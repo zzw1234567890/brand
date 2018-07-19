@@ -1,0 +1,6 @@
+/* pages/offic/offic.wxss */
+.bottomViewItem{
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+}

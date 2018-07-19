@@ -1,0 +1,38 @@
+<!--pages/text/text.wxml-->
+<view class="container">
+  <view class='progress'>
+    <view class='box'>
+      <view class='bpic'>
+        <image class='icon' src='../../img/ani.png'></image>
+      </view>
+      <view class='bp'>
+        <progress class='style' percent="{{progress}}" show-info active stroke-width="6" color="#166fb4" />
+      </view>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='text'>
+      <view class='top'>
+        <view class='qus'>
+          <text class='detail'>下面哪个是法国的美妆品牌？</text>
+        </view>
+      </view>
+      <view class='content'>
+        <view class='area' wx:for='{{area}}' wx:key='*this'>
+          <view class='areaPic'>
+            <image class='pic' src='{{item.pic}}'></image>
+          </view>
+          <view class='areaName'>
+            <text class='name'>{{item.brandName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='foot'>
+      <button type='button' class='sumbit'>确定</button>
+      <text class='info'>不认识？戳这里有提示哦~</text>
+    </view>
+  </view>
+</view>

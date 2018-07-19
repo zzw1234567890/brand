@@ -1,0 +1,13 @@
+/* pages/home/home.wxss */
+.donghua{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  background: rebeccapurple;
+}
+/* .love{
+  width: 20px;
+  height: 20px;
+} */

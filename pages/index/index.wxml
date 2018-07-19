@@ -1,13 +1,125 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='searchContain'>
+    <view class='search'>
+      <image class='icon' src='../../img/search2.png' />
+      <input class='searchItem' type='text' disabled placeholder='请输入关键词搜索' placeholder-class="placeholder" bindtap='search'></input>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='navbar'>
+    <view class='nav'>
+      <view class='area' wx:for="{{nav}}" wx:for-index="index" wx:key='*this' data-id="{{item.id}}" bindtap='home'>
+        <view class='img'>
+          <image class='brandPic' src='{{item.img}}'></image>
+        </view>
+        <view class='tex'>
+          <text class='brangName'>{{item.name}}</text>
+        </view>
+      </view>
+   
+    </view>
   </view>
+  <view class='switch'>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{movies}}" wx:for-index="index" wx:key='*this'>
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='info'>
+    <view class='infoPush'>
+      <view class='infoIcon'>
+        <image class='infoLeft' src='../../img/info.png'></image>
+      </view>
+      <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3000">
+        <block wx:for="{{msgList}}" wx:key="*this">
+          <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+            <swiper-item>
+              <view class="swiper_item">{{item.title}}</view>
+            </swiper-item>
+          </navigator>
+        </block>
+      </swiper>
+      <view class='infoIcon2'>
+        <image class='infoRight' src='../../img/info2.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='header'>
+      <text class='title'>推荐榜</text>
+    </view>
+    <view class='mian' wx:for="{{brand}}" wx:for-index="index" wx:key='*this'>
+      <view class='logo'>
+        <image class='logoPic' src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg'></image>
+      </view>
+      <view class='brandMain'>
+        <view class='box' data-detail='{{item}}' bindtap='touch'>
+          <view class='top'>
+            <view class='leftName'>
+              <text class='brandName'>{{item.brandName}}</text>
+            </view>
+            <view class='rightName'>
+              <text class='companyName'>{{item.companyName}}</text>
+            </view>
+          </view>
+          <view class='middle'>
+            <view class='detail'>
+              <text class='brandDetail'>{{item.brandDetail}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='bottom'>
+          <view class='bottomLeft'>
+            <image class='b-pic' src='{{item.hotPic}}'></image>
+            <text class='text'>{{item.hot}}</text>
+          </view>
+          <button type='button' class='bottomMiddle' data-id='{{item}}' open-type="share">
+            <image class='b-pic' src='../../img/share.png'></image>
+            <text class='text texts'>分享</text>
+          </button>
+          <view class='bottomRight' id="{{index}}" wx:if="{{item.isvote==1}}" bindtap='toCollect' data-index='{{index}}'> 
+            <image class='b-pic' src="../../img/icon1.png"></image>
+            <text class='text zan'>{{item.paioshu}}</text>
+          </view>
+          <view class='bottomRight' wx:else bindtap='toCollect' id="{{index}}" data-index='{{index}}'>
+            <image class='b-pic' src="../../img/tuopiao.png"></image>
+            <text class='text'>投票</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='s-float' hidden="{{sview}}">
+  <view class='showview'>
+    <view class='s-top'>
+      <view class='s-logo'>
+        <image class='s-pic' src='{{detail.pic}}'></image>
+      </view>
+      <view class='s-detail'>
+        <view class='s-name'>
+          <text class='sName'>{{detail.brandName}}</text>
+        </view>
+        <view class='s-company'>
+          <text class='sCompany'>{{detail.companyName}}</text>
+        </view>
+        <view class='s-other'>
+          <view class='s-left'>
+            <text class='other'>品牌年龄：{{detail.age}}</text>
+          </view>
+          <view class='s-right'>
+            <text class='other'>所属地址：{{detail.country}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='s-middle'>
+      <text class='s-paper'>{{detail.brandDetail}}</text>
+    </view>
+  </view>
+</view>
+<view class='mask' bindtap="touch" hidden='{{mask}}'>
 </view>
