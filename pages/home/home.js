@@ -413,17 +413,16 @@ Page({
     ],
   },
   onLoad: function () {
+    // 分类
+    that=this;
     wx.request({
-      url: 'https://go.zhangzw.top/web/type/getthirdtype',
-      data: {},
-      method: "POST",
+      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+      method: 'POST',
+      data: "navNumber == 1",
       header: { "content-type": "application/x-www-form-urlencoded" },
       success: function (e) {
-        console.log(e)
-        // that.setData({ dishesList: e.data });
-        // that.setData({ sview: false });
-        // that.setData({ mask: false });
-        console.log(e.data)
+        // console.log(e);
+        that.setData({ navList: e.data })
       }
     })
 
@@ -483,6 +482,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+  
 
   },
 

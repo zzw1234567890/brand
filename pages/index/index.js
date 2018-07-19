@@ -233,7 +233,7 @@ Page({
         url: '../food/food'
       })
     }
-    if (navNumber == 5) {
+    if (navNumber == 6) {
       wx.navigateTo({
         url: '../daily/daily'
       })

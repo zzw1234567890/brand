@@ -392,6 +392,18 @@ Page({
     ],
   },
   onLoad: function () {
+    // 分类
+    that = this;
+    wx.request({
+      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+      method: 'POST',
+      data: "navNumber == 4",
+      header: { "content-type": "application/x-www-form-urlencoded" },
+      success: function (e) {
+        // console.log(e);
+        that.setData({ navList: e.data })
+      }
+    })
 
   },
   selectNav: function (e) {
