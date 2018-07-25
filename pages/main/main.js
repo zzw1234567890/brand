@@ -11,18 +11,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: '',
-      data: {},
-      method: "POST",
-      header: { "content-type": "application/x-www-form-urlencoded" },
-      success: function (e) {
-        // that.setData({ detail: e.data });
-        // that.setData({ sview: false });
-        // that.setData({ mask: false });
-        console.log(e.data)
-      }
-    })
+    // wx.request({
+    //   url: '',
+    //   data: {},
+    //   method: "POST",
+    //   header: { "content-type": "application/x-www-form-urlencoded" },
+    //   success: function (e) {
+    //     // that.setData({ detail: e.data });
+    //     // that.setData({ sview: false });
+    //     // that.setData({ mask: false });
+    //     console.log(e.data)
+    //   }
+    // })
 
   },
 

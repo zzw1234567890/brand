@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background: #f6f6f6;
@@ -11,68 +11,108 @@
 
 .progress {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: #f6f6f6;
 }
 
 .box {
   width: 90%;
   height: 40px;
-  /* background: orange; */
-  margin: 10px 5%;
+  background: #fff;
+  margin: 30px 5% 10px 5%;
+  border-radius: 5px;
 }
 
-.bpic {
-  width: 20%;
+.my {
+  width: 55%;
   height: 40px;
   float: left;
   /* background: rebeccapurple; */
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
+.myNum {
+  font-size: 16px;
+  /* width: 40%; */
+  height: 40px;
+  line-height: 40px;
   display: block;
-  margin: 10px auto;
-  /* float: right;  */
+  text-indent: 10px;
+  color: #444;
+  /* background: rebeccapurple; */
+  float: left;
 }
 
-.bp {
-  width: 80%;
+.record {
+  width: 45%;
   height: 40px;
   /* background: red; */
   float: left;
 }
 
-.style {
+.myrecord {
+  font-size: 16px;
+  /* width: 80%; */
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  color: #444;
+  float: left;
+}
+
+.num {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  display: block;
   color: #166fb4;
-  margin: 10px 0;
-  font-size: 14px;
+  float: left;
+  font-size: 16px;
+  text-indent: 5px;
+}
+.num2{
+  color: red;
 }
 
 .main {
   width: 100%;
-  height: 400px;
-   background: #f6f6f6; 
-  margin: 0;
+  height: 405px;
+  background: #f6f6f6;
+  margin-top: 10px;
   padding: 0;
+  /* width: 100%; */
+  position: relative;
+  /* position:  */
 }
 
-.text {
-  width: 90%;
-  height: 380px;
-  /* background: #fff; */
-  margin: 0 auto;
+.main .text:nth-of-type(1) {
+  z-index: 10;
+}
+
+.main .text:nth-of-type(n+4) {
+  transform: translateX(40px) scale(0.6);
+  transform-origin: 100% 50% 0;
+}
+
+.main .text {
+  transition: all 1s;
+  overflow: hidden;
+  border-radius: 1px;
+  /* margin-top:15px;   */
+  width: calc(100% - 10%);
+  height: auto;
+  background: #f6f6f6;
+  position: absolute;
+  box-shadow: 3px 3px 10px 0px #777;
+  margin-left: 5%;
 }
 
 .top {
   width: 100%;
   height: 80px;
   background: #166fb4;
-   /* border-radius: 5px; */
   box-shadow: 2px 2px 3px #ccc;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;  
+  border-top-right-radius: 5px;
 }
 
 .qus {
@@ -96,18 +136,42 @@
 .content {
   width: 100%;
   height: 290px;
-   background:#fff; 
+  background: #fff;
   /* opacity: 0.2; */
   position: relative;
-   border-radius: 5px;
+  border-radius: 5px;
   box-shadow: 2px 2px 3px #ccc;
   /* z-index: -222 */
 }
 
-.area {
+.selection1 {
   width: 35%;
   height: 120px;
   background: linear-gradient(lightblue, #fff);
+  /* position: absolute; */
+  margin: 10px 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #ccc;
+  float: left;
+  /* z-index: 222; */
+}
+
+.selection2 {
+  width: 35%;
+  height: 120px;
+  background: #df6868;
+  /* position: absolute; */
+  margin: 10px 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #ccc;
+  float: left;
+  /* z-index: 222; */
+}
+
+.selection3 {
+  width: 35%;
+  height: 120px;
+  background: lightgreen;
   /* position: absolute; */
   margin: 10px 25px;
   border-radius: 5px;
@@ -156,25 +220,30 @@
   height: 150px;
   background: #f6f6f6;
 }
-.foot{
+
+.foot {
   width: 90%;
   height: 150px;
-  /* background: yellow; */
+  /* background: yellow;  */
   margin: 0 auto;
   position: relative;
 }
-.sumbit{
-   width: 100%;
+
+.sumbit {
+  width: 100%;
   height: 50px;
-   background: #166fb4; 
+  background: #166fb4;
   border-radius: 20px;
   color: #fff;
   position: absolute;
   margin-top: 40px;
   letter-spacing: 2px;
+  /* margin-left: 10px; */
+  /* float: left; */
 }
-.info{
-   width: 100%;
+
+.info {
+  width: 100%;
   height: 50px;
   display: block;
   font-size: 14px;

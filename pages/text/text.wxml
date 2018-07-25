@@ -2,23 +2,26 @@
 <view class="container">
   <view class='progress'>
     <view class='box'>
-      <view class='bpic'>
-        <image class='icon' src='../../img/ani.png'></image>
+      <view class='my'>
+        <text class='myNum'>您已经答对: </text>
+        <text class='num'>{{num}}</text>
+        <text class='myNum'>道题啦</text>
       </view>
-      <view class='bp'>
-        <progress class='style' percent="{{progress}}" show-info active stroke-width="6" color="#166fb4" />
+      <view class='record'>
+        <text class='myrecord'>您的最高纪录:</text>
+        <text class='num num2'>{{record}}</text>
       </view>
     </view>
   </view>
   <view class='main'>
-    <view class='text'>
+    <view class='text' wx:for="{{text}}" wx:key='*this' style="opacity:{{item.display}};transform: translateX({{item.slateX}}) scale({{item.scale}});z-index:{{item.zIndex}};transform-origin: 100% 50% 0;{{item.style}}">
       <view class='top'>
         <view class='qus'>
-          <text class='detail'>{{problem}}</text>
+          <text class='detail'>{{item.problem}}</text>
         </view>
       </view>
       <view class='content'>
-        <view class='area' wx:for='{{area}}' wx:key='*this' bindtap=''>
+        <view class='{{item.class}}' data-index='{{index}}' wx:for='{{item.area}}' wx:key='*this' bindtap='select'>
           <view class='areaPic'>
             <image class='pic' src='{{item.pic}}'></image>
           </view>
@@ -31,7 +34,7 @@
   </view>
   <view class='footer'>
     <view class='foot'>
-      <button type='button' class='sumbit'>确定</button>
+      <button class='sumbit' type='button' bindtap="moveItem" bindtouchstart="moveStart">换一题</button>
       <text class='info'>不认识？戳这里有提示哦~</text>
     </view>
   </view>
