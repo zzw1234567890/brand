@@ -1,0 +1,38 @@
+<view class='container'>
+
+<view class='searchContain'>
+    <view class='search'>
+      <image class='icon' src='../../images/search2.png' />
+      <input class='searchItem' type='text' disabled placeholder='请输入关键词搜索' placeholder-class="placeholder" bindtap='search'></input>
+    </view>
+</view>
+
+<view class='content'>
+    <view class='header'>
+      <text class='title'>我的收藏 (长按可删除)</text>
+    </view>
+    <view class='mian' wx:for="{{brand}}" wx:for-index="index" wx:key='*this' bindtap='delete'>
+      <view class='logo'>
+        <image class='logoPic' src='{{item.pic}}' data-index='{{index}}'></image>
+      </view>
+      <view class='brandMain'>
+        <view class='box' data-detail='{{item}}'>
+          <view class='top'>
+            <view class='leftName'>
+              <text class='brandName'>{{item.brandName}}</text>
+            </view>
+            <view class='rightName'>
+              <text class='companyName'>{{item.companyName}}</text>
+            </view>
+          </view>
+          <view class='middle'>
+            <view class='detail'>
+              <text class='brandDetail'>{{item.brandDetail}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
