@@ -1,0 +1,9 @@
+<form bindsubmit='submit1'>
+  <view class='container1'>
+    <textarea class='text1' placeholder='{{placeholder}}' bindblur='input1' value='{{value}}'>
+    </textarea>
+    <button type='primary' formType="submit" class='btn1'>
+      提交
+    </button>
+  </view>
+</form>

@@ -1,0 +1,57 @@
+<view class='both'>
+
+  <view class='header'>
+    <image class='bg' src='../../images/9.jpg'></image>
+    <view class="userinfo">
+      <view>
+        <image src='../../images/9.jpg' class='userinfo-avatar'></image>
+      </view>
+      <view class="userinfo-nickname">
+        <text>陈晨</text>
+      </view>
+    </view>
+
+    <view class='body_1'>
+      <view class='collection'>
+        <text>我的标签</text>
+      </view>
+
+      <view class='tag'>
+        <text>我的收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='body_2'>
+
+    <view class='testRecorde'>
+      <view>
+        <image src='../../images/test5.png' class='img1'></image>
+        <text>测试记录</text>
+      </view>
+
+      <view class='rightArrow'></view>
+    </view>
+    <view class='invitation'>
+      <view>
+        <image src='../../images/test6.png' class='img2'></image>
+        <text>邀请好友</text>
+      </view>
+      <view class='rightArrow'></view>
+    </view>
+    <view class='aboutUs'>
+      <view>
+        <image src='../../images/test7.png' class='img3'></image>
+        <text>关于我们</text>
+      </view>
+      <view class='rightArrow'></view>
+    </view>
+    <view class='feedback'>
+      <view>
+        <image src='../../images/test8.png' class='img4'></image>
+        <text>提交反馈</text>
+      </view>
+      <view class='rightArrow'></view>
+    </view>
+  </view>
+</view>

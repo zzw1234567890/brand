@@ -1,0 +1,158 @@
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+}
+
+.searchContain {
+  height: 100rpx;
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.search {
+  height: 60rpx;
+  width: 700rpx;
+  margin: 20rpx auto;
+  background: white;
+  position: relative;
+  border-radius: 10rpx;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 6rpx;
+  margin-left: 10rpx;
+  position: absolute;
+}
+
+.searchItem {
+  /* background: green;  */
+  height: 60rpx;
+  width: 640rpx;
+  padding-left: 60rpx;
+}
+
+.placeholder {
+  font-size: 24rpx;
+  /* padding-left: 50px;   */
+  text-align: center;
+}
+
+.content {
+  height: auto;
+  width: 100%;
+  background: #f6f6f6;
+  margin-top: 20rpx;
+}
+
+.header {
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+}
+
+.title {
+  height: 60rpx;
+  /* background: rebeccapurple; */
+  font-size: 32rpx;
+  /* font-weight: bold; */
+  color: #166fb4;
+  padding-left: 40rpx;
+}
+
+.mian {
+  width: 98%;
+  height: 240rpx;
+  margin: 20rpx auto;
+  /* border: 1px solid #ccc; */
+  box-shadow: 4rpx 4rpx 6rpx #ccc;
+  background: #fff;
+}
+
+.logo {
+  width: 30%;
+  height: 200rpx;
+  float: left;
+  border: 1px solid #ccc;
+  margin: 20rpx 10rpx 20rpx 10rpx;
+  /* float: left; *//* background: yellowgreen; */
+}
+
+.logoPic {
+  width: 100%;
+  height: 200rpx;
+}
+
+.brandMain {
+  width: 66%;
+  height: 240rpx;
+  float: left;
+  /* background: yellow; */
+}
+
+.top {
+  width: 100%;
+  height: 60rpx;
+  /* background: rebeccapurple; */
+}
+
+.leftName {
+  width: 50%;
+  height: 60rpx;
+  font-weight: bold;
+  /* background: red; */
+  float: left;
+}
+
+.brandName {
+  width: 100%;
+  height: 60rpx;
+  display: block;
+  font-size: 28rpx;
+  color: #166fb4;
+   overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 60rpx;
+}
+
+.rightName {
+  width: 50%;
+  height: 60rpx;
+  /* background: pink; */
+  float: left;
+  letter-spacing: 0;
+}
+
+.companyName {
+  width: 100%;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #166fb4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  line-height: 60rpx;
+}
+
+.brandDetail {
+  display: block;
+  width: 100%;
+  height: 150rpx;
+  /* background: lavender; *//* line-height: 0; *//* line-height: 100px; */
+  font-size: 28rpx;
+  letter-spacing: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  color: #444;
+}
+
+
+
