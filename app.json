@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/my/my",
+    "pages/logs 666/logs 666",
+    "pages/index 666/index 666",
+    "pages/index+1 666/index+1 666",
+        
     "pages/main/main",
     "pages/search/search",
     "pages/home/home",
@@ -32,7 +34,7 @@
         "selectedIconPath": "img/move.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/index+1 666/index+1 666",
         "text": "我",
         "iconPath": "img/my2.png",
         "selectedIconPath": "img/my.png"
