@@ -9,19 +9,19 @@
   <view class="top10 {{showView?'show':'hide'}}">
     <view class="top" wx:for="{{brand}}" wx:for-index="index" wx:key='*this'>
       <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
-      <view class="you">
+      <view class="you" >
         <view class="title">
-          <text class="title">{{item.title}}</text>
+          <text class="title" bindtap='touch'>{{item.title}}</text>
           <image class="trend" src="{{item.trend}}"></image>
           <button class="guanzhu" bindtap='btnClick'>
-            <text class='gz' hidden='{{sview}}'>+ 关注</text>
+            <text class='gz' hidden='{{yview}}'>+ 关注</text>
             <text class='gz' hidden='{{view}}'>已关注</text>
           </button>
         </view>
-        <view class="age">
+        <view class="age" bindtap='touch'>
           <text class="age">品牌年龄：{{item.age}}</text>
         </view>
-        <view class="nation">
+        <view class="nation" bindtap='touch'>
           <text class="nation">所属地址：{{item.nation}}</text>
         </view>
         <view class="biao">
@@ -46,19 +46,19 @@
   <view class="top10 {{showView1?'show':'hide'}}">
     <view class="top" wx:for="{{brand1}}" wx:for-index="index" wx:key='*this'>
       <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
-      <view class="you">
+      <view class="you" >
         <view class="title">
-          <text class="title">{{item.title}}</text>
+          <text class="title" bindtap='touch'>{{item.title}}</text>
           <image class="trend" src="{{item.trend}}"></image>
           <button class="guanzhu" bindtap='btnClick'>
-            <text class='gz' hidden='{{sview}}'>+ 关注</text>
+            <text class='gz' hidden='{{yview}}'>+ 关注</text>
             <text class='gz' hidden='{{view}}'>已关注</text>
           </button>
         </view>
-        <view class="age">
+        <view class="age" bindtap='touch'>
           <text class="age">品牌年龄：{{item.age}}</text>
         </view>
-        <view class="nation">
+        <view class="nation" bindtap='touch'>
           <text class="nation">所属地址：{{item.nation}}</text>
         </view>
         <view class="biao">
@@ -77,5 +77,37 @@
       </view>
     </view>
   </view>
+
+<!-- 弹出框 -->
+  <view class='s-float' hidden="{{sview}}" wx:for="{{detail}}" wx:for-index="index" wx:key='*this'>
+  <view class='showview'>
+    <view class='s-top'>
+      <view class='s-logo'>
+        <image class='s-pic' src='{{item.pic}}'></image>
+      </view>
+      <view class='s-detail'>
+        <view class='s-name'>
+          <text class='sName'>{{item.brandName}}</text>
+        </view>
+        <view class='s-company'>
+          <text class='sCompany'>{{item.companyName}}</text>
+        </view>
+        <view class='s-other'>
+          <view class='s-left'>
+            <text class='other'>品牌年龄：{{item.age}}</text>
+          </view>
+          <view class='s-right'>
+            <text class='other'>所属地址：{{item.country}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='s-middle'>
+      <text class='s-paper'>{{item.brandDetail}}</text>
+    </view>
+  </view>
+</view>
+<view class='mask' bindtap="touch" hidden='{{mask}}'>
+</view>
 
 </view>

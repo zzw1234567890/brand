@@ -1,2 +1,21 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="container">
+
+  <view class='search'>
+    <view class="searchItem">
+      <image class='icon' src='../../img/search2.png' />
+      <input class='s-lost' type='text' maxlength='10' placeholder='请输入关键词搜索' placeholder-class="placeholder" auto-focus value="{{searchValue}}" bindinput="searchValueInput" bindchange="bindchange"></input>
+      <image class='icon-del' src='../../img/del.png' bindtap="clearInput" />
+    </view>
+    <view class='tap' bindtap="suo">搜索</view>
+  </view>
+
+  <view class="hot">
+    <view class="ci">热搜</view>
+    <view class="res">
+    <button class="btn" wx:for="{{array}}" wx:key="*this">{{item.keyword}}</button>
+    </view>
+  </view>
+
+<view class="history"></view>
+</view>

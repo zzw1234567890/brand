@@ -1,16 +1,19 @@
 // pages/home/home.js
 
 var that;
-var index;
+var Index;
+// var index0;
+var id;
 Page({
   data: {
+    // iindex:0,
     winWidth: 0,
     winHeight: 0,
     // tab切换
     currentTab: 0,
-    curNav: '0',
-    curIndex: '0',
-    // dishesList[0]:true,
+    curNav: 1,
+    curIndex: 0,
+    // index0:[],
     navList: [{
       id: 0,
       pic: "/img/qiang.png",
@@ -67,377 +70,42 @@ Page({
       name: '房产/安防',
     },
     ],
-    dishesList: [
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 4,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 5,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 6,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 4,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 5,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 6,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 4,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 5,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 6,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-      [{
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 1,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 2,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      {
-        name: '衣服',
-        pic: "/img/sofa2.png",
-        id: 3,
-      },
-      ],
-    ],
+
   },
-  onLoad: function () {
-    // 分类
-    that=this;
+  onLoad: function (e) {
+    
+
+  },
+  selectNav: function (e) {
+    that = this;
+    console.log(e)    
+    id = e.currentTarget.dataset.id;
+    // that.setData({iindex:e.currentTarget.dataset.index});
+    // console.log(index)
+    that.setData({
+      curNav: id,
+      curIndex: e.currentTarget.dataset.index
+    });
+
+    //三级分类请求   
+
+    Index = that.data.curIndex
+    // third = that.data.dishesList[Index];
     wx.request({
-      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+
+      url: 'https://go.zhangzw.top/web/type/getthirdtype',
       method: 'POST',
-      data: "navNumber == 1",
+      data: {
+        second_id: id
+      },
       header: { "content-type": "application/x-www-form-urlencoded" },
       success: function (e) {
-        // console.log(e);
-        that.setData({ navList: e.data })
+        var key = `dishesList[${Index}]`;// =>'dishesList[' + Index +']'
+        that.setData({ [key]: e.data });
       }
     })
 
 
-  },
-  selectNav: function (e) {
-    // console.log(e);
-    that = this;
-    let id = e.currentTarget.dataset.id;
-    // console.log(e);
-    index = e.currentTarget.dataset.index;
-    that.setData({
-      curNav: id,
-      curIndex: index,
-    });
   },
 
 
@@ -448,9 +116,9 @@ Page({
       url: '../search/search',
     })
   },
-  
+
   //三级分类跳转
-  classify:function(){
+  classify: function () {
     wx.navigateTo({
       url: '../paih/paih',
     })
@@ -467,8 +135,40 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    that = this;
+    // console.log(id);
+    //二级分类请求
+    wx.request({
+      url: 'https://go.zhangzw.top/web/type/getsecondtype',
+      method: 'POST',
+      data: {
+        first_id: wx.getStorageSync('navNumber')
+      },
+      header: { "content-type": "application/x-www-form-urlencoded" },
+      success: function (e) {
+        // console.log(e)
+        wx.setStorageSync("id", e.data[0].id)
+        that.setData({navList:e.data});
+        wx.request({
+          url: 'https://go.zhangzw.top/web/type/getthirdtype',
+          method: 'POST',
+          data: {
+            second_id: wx.getStorageSync("id")
+          },
+          header: { "content-type": "application/x-www-form-urlencoded" },
+          success: function (e) {
+            // console.log(e)
+            var curIndex = that.data.curIndex
+            var key = `dishesList[${curIndex}]`;// =>'dishesList[' + Index +']'
+            that.setData({ [key]: e.data });
 
-
+            // // index0=e.data[0]
+            // that.setData({ [key]: e.data[0] });
+          }
+        })
+      }
+    });
+    
   },
 
   /**
@@ -482,7 +182,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
 
   },
 

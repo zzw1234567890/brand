@@ -5,6 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
+    array:[
+      {"keyword":"口红",},
+      { "keyword": "短裙", },
+      { "keyword": "笔记本电脑", },
+      { "keyword": "冰箱", },
+      { "keyword": "笔记本电脑", },
+      { "keyword": "真丝连衣裙", },
+      { "keyword": "冰箱", },
+      { "keyword": "笔记本电脑", },
+      { "keyword": "真丝连衣裙", },
+      ],
   
   },
 

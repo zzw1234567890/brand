@@ -10,14 +10,14 @@
 
   <view class="aside flex flex-direction-col">
     <block wx:for="{{navList}}" wx:key="id">
-      <view class="nav-item {{curNav==item.id?'selected':''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">
+      <view class="nav-item {{index==curIndex?'selected':''}}" bindtap="selectNav" data-index="{{index}}" data-id="{{item.id}}">
         <image class="tu" src="{{item.pic}}" />
         <text class="zi">{{item.name}}</text>
       </view>
     </block>
   </view>
 
-  <view class="content">
+  <scroll-view scroll-y  class="content">
     <block wx:for="{{dishesList[curIndex]}}" wx:key="*this">
       <view class="box1" bindtap='classify'>
         <view class="pic">
@@ -26,7 +26,7 @@
         <text class="text">{{item.name}}</text>
       </view>
     </block>
-  </view>
+</scroll-view> 
 
 </view>
 

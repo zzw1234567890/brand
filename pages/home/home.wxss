@@ -53,10 +53,11 @@ page {
   flex-direction: column;
 } 
 .aside {
-    float:left; 
+  float:left; 
   width:27%; 
   border-right: 1px solid #ddd;
   height:auto;
+  background: #e6e6e6;
 }
 .nav-item {
   padding: 10rpx;
@@ -84,8 +85,9 @@ page {
   .content{
   float:left;
   width:70%;
-  height:1000rpx;
+  height:auto;
   /* flex-direction:initial; */
+
 } 
 .box1{
   width:30%;
