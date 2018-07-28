@@ -26,7 +26,7 @@
         <view class="biao">
 
 
-          <button class="middle">
+          <button class="middle" open-type="share">
             <image class='share' src='/img/share.png'></image>
             <text class='t-share'>分享</text>
           </button>

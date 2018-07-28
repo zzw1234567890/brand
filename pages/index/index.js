@@ -280,7 +280,7 @@ Page({
    */
   onShareAppMessage: function(e) {
     ids = e.target.dataset.id
-    // console.log(ids)
+    console.log(ids)
     if (e.from != "menu") {
       return {
         title: "品牌排名",

@@ -3,6 +3,7 @@ var app = getApp()
 var that;
 var arrSrc = [];
 var index;
+var ids;
 Page({
 
   /**
@@ -24,49 +25,7 @@ Page({
   onLoad: function (options) {
 
     that=this,
-    //搜索跳转请求
-    // wx.request({
-    //   url: 'https://go.zhangzw.top/web/search/index',
-    //   method: 'POST',
-    //   data: {
-    //     userid: wx.getStorageSync("userid"),
-    //     search: wx.getStorageSync("label"),
-    //   },
-    //   header: {
-    //     "content-type": "application/x-www-form-urlencoded"
-    //   },
-    //   success: function (e) {
-    //     console.log(e);
-    //     that.setData({
-    //       brand: e.data
-    //     })
-    //   }
-    // })
 
-
-    //搜索热词跳转请求
-    // wx.request({
-    //   url: 'https://go.zhangzw.top/web/search/index',
-    //   method: 'POST',
-    //   data: {
-    //     userid: wx.getStorageSync("userid"),
-    //     search: wx.getStorageSync("text "),
-    //   },
-    //   header: {
-    //     "content-type": "application/x-www-form-urlencoded"
-    //   },
-    //   success: function (e) {
-    //     // console.log(e);
-    //     that.setData({
-    //       brand: e.data
-    //     })
-    //   }
-    // })
-
-    // //第三分类跳转请求
-    // // if (wx.getStorageSync("that.data.searchValue ") || wx.getStorageSync("label ") || wx.getStorageSync("text ")){
-    // //   wx.
-    // // }
     wx.request({
       url: 'https://go.zhangzw.top/web/search/index',
       method: 'POST',
@@ -78,7 +37,7 @@ Page({
         "content-type": "application/x-www-form-urlencoded"
       },
       success: function (e) {
-        console.log(e);
+        // console.log(e);
         that.setData({
           brand: e.data
         })
@@ -169,7 +128,24 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (e) {
+
+    // ids = e.target.dataset.id
+    // console.log(ids);
+    // // console.log(ids)
+    // if (e.from != "menu") {
+    //   return {
+    //     title: "品牌排名",
+    //     imageUrl: ids.img,
+    //     path: "/pages/paih/paih?id=" + ids.id,
+    //   }
+    // } else {
+    //   return {
+    //     title: "品牌 Top",
+    //     imageUrl: '../../img/logo.jpg',
+    //     path: "/pages/paih/paih",
+    //   }
+    // }
 
   },
   //点击事件

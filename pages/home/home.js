@@ -120,7 +120,7 @@ Page({
   classify: function (e) {
     var that = this
     var label = e.currentTarget.dataset.text
-    console.log(e.currentTarget.dataset.text)
+    // console.log(e.currentTarget.dataset.text)
     wx.setStorageSync('label', label)
 
     wx.navigateTo({
