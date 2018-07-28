@@ -38,7 +38,6 @@ page {
 }
 
 .s-lost {
-  /* background: green;  */
   height: 60rpx;
   width: 640rpx;
   font-size: 25rpx;

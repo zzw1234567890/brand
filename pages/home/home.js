@@ -1,5 +1,4 @@
 // pages/home/home.js
-
 var that;
 var Index;
 // var index0;
@@ -75,13 +74,10 @@ Page({
   },
   onLoad: function (e) {
     
-
   },
   selectNav: function (e) {
     that = this;   
     id = e.currentTarget.dataset.id;
-    // that.setData({iindex:e.currentTarget.dataset.index});
-    // console.log(index)
     that.setData({
       curNav: id,
       curIndex: e.currentTarget.dataset.index
