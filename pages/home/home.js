@@ -4,6 +4,7 @@ var that;
 var Index;
 // var index0;
 var id;
+
 Page({
   data: {
     // iindex:0,
@@ -77,8 +78,7 @@ Page({
 
   },
   selectNav: function (e) {
-    that = this;
-    console.log(e)    
+    that = this;   
     id = e.currentTarget.dataset.id;
     // that.setData({iindex:e.currentTarget.dataset.index});
     // console.log(index)
@@ -91,8 +91,8 @@ Page({
 
     Index = that.data.curIndex
     // third = that.data.dishesList[Index];
-    wx.request({
 
+    wx.request({
       url: 'https://go.zhangzw.top/web/type/getthirdtype',
       method: 'POST',
       data: {
@@ -102,10 +102,9 @@ Page({
       success: function (e) {
         var key = `dishesList[${Index}]`;// =>'dishesList[' + Index +']'
         that.setData({ [key]: e.data });
+        // console.log(e)
       }
     })
-
-
   },
 
 
@@ -118,7 +117,12 @@ Page({
   },
 
   //三级分类跳转
-  classify: function () {
+  classify: function (e) {
+    var that = this
+    var label = e.currentTarget.dataset.text
+    console.log(e.currentTarget.dataset.text)
+    wx.setStorageSync('label', label)
+
     wx.navigateTo({
       url: '../paih/paih',
     })
@@ -156,6 +160,7 @@ Page({
             second_id: wx.getStorageSync("id")
           },
           header: { "content-type": "application/x-www-form-urlencoded" },
+          
           success: function (e) {
             // console.log(e)
             var curIndex = that.data.curIndex

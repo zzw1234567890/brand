@@ -19,11 +19,11 @@
 
   <scroll-view scroll-y  class="content">
     <block wx:for="{{dishesList[curIndex]}}" wx:key="*this">
-      <view class="box1" bindtap='classify'>
+      <view class="box1" data-text="{{item.name}}" bindtap='classify'>
         <view class="pic">
           <image class="pic" src='{{item.pic}}'></image>
         </view>
-        <text class="text">{{item.name}}</text>
+        <text class="text" >{{item.name}}</text>
       </view>
     </block>
 </scroll-view> 
