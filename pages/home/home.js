@@ -14,62 +14,6 @@ Page({
     curNav: 1,
     curIndex: 0,
     // index0:[],
-    navList: [{
-      id: 0,
-      pic: "/img/qiang.png",
-      name: '墙顶饰材',
-    },
-    {
-      id: 1,
-      pic: "/img/di.png",
-      name: '地面材料',
-    },
-    {
-      id: 2,
-      pic: "/img/weiyu.png",
-      name: '卫浴五金',
-    },
-    {
-      id: 3,
-      pic: "/img/menc.png",
-      name: '门窗/楼梯',
-    },
-    {
-      id: 4,
-      pic: "/img/shuidian.png",
-      name: '水电材料',
-    },
-    {
-      id: 5,
-      pic: "/img/bancai.png",
-      name: '板材/饰材',
-    },
-    {
-      id: 6,
-      pic: "/img/deng.png",
-      name: '照明/灯饰',
-    },
-    {
-      id: 7,
-      pic: "/img/jianzhu.png",
-      name: '建筑材料',
-    },
-    {
-      id: 8,
-      pic: "/img/jiasi.png",
-      name: '家私定制',
-    },
-    {
-      id: 9,
-      pic: "/img/buyi.png",
-      name: '家纺/布艺',
-    },
-    {
-      id: 10,
-      pic: "/img/fangchan.png",
-      name: '房产/安防',
-    },
-    ],
 
   },
   onLoad: function (e) {
