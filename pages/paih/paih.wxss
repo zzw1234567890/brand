@@ -23,26 +23,12 @@
 .one {
   width: 40%;
   height: 80rpx;
-  float: left;
-  margin-left: 40rpx;
   line-height: 80rpx;
   background: white;
   border: 1px solid #166fb4;
-}
-
-.bg {
   color: #166fb4;
 }
 
-.two {
-  width: 40%;
-  height: 80rpx;
-  float: right;
-  margin-right:40rpx;
-  line-height: 80rpx;
-  background: white;
-  border: 1px solid #166fb4;
-}
 .top10{
   width:100%;
   height:auto;
@@ -57,7 +43,7 @@
 }
 
 .logo {
-  width: 40%;
+  width: 32%;
   height: 220rpx;
   float: left;
   margin-top: 10rpx;
@@ -65,7 +51,7 @@
 }
 
 .you {
-  width: 55%;
+  width: 63%;
   height: 240rpx;
   /* border: 1px solid red; */
   float: left;

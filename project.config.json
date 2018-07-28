@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -61,6 +61,17 @@
 					"name": "offic",
 					"pathName": "pages/offic/offic",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "paih",
+					"pathName": "pages/paih/paih",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search"
 				}
 			]
 		}

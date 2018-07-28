@@ -9,64 +9,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showView: true,
-    showView1: false,
-    bg: true,
     yview: false,
     view: true,
     index: '',
     mask: true,
     sview: true,
-    brand: [
-      {
-        "pic": "http://bpic.588ku.com/element_origin_min_pic/16/10/30/528aa13209e86d5d9839890967a6b9c1.jpg",
-        "title": "魅可/M.A.C",
-        "trend": "/img/up.png",
-        "age": "33岁",
-        "nation": "美国",
-      },
-      {
-        "pic": "/img/mac.png",
-        "trend": "/img/down.png",
-        "title": "魅可/M.A.C",
-        "age": "33岁",
-        "nation": "美国",
-      },
-    ],
-    brand1: [
-      {
-        "pic": "http://bpic.588ku.com/element_origin_min_pic/16/10/30/528aa13209e86d5d9839890967a6b9c1.jpg",
-        "title": "魅可/M.A.C~",
-        "trend": "/img/up.png",
-        "age": "33岁",
-        "nation": "美国",
-      },
-      {
-        "pic": "/img/mac.png",
-        "trend": "/img/up.png",
-        "title": "CHANEL 香奈儿",
-        "age": "33岁",
-        "nation": "美国",
-      },
-    ],
-    detail: [
-      {
-        "pic": "/img/mac.png",
-        "brandName": "CHANEL 香奈儿",
-        "companyName": "(香奈儿(中国)贸易有限公司)",
-        "brandDetail": "(400-120-0500，始于1910年法国,以双C标志/菱形格纹/山茶花为品牌标志,No.5香水/2.55手袋/小黑裙/双色鞋是时尚界永恒经典,法国香奈儿(CHANEL)公司)",
-        "age": "33岁",
-        "country": "法国",
-      },
-      {
-        "pic": "/img/mac.png",
-        "brandName": "CHANEL 香奈儿",
-        "companyName": "(香奈儿(中国)贸易有限公司)",
-        "brandDetail": "(400-120-0500，始于1910年法国,以双C标志/菱形格纹/山茶花为品牌标志,No.5香水/2.55手袋/小黑裙/双色鞋是时尚界永恒经典,法国香奈儿(CHANEL)公司)",
-        "age": "33岁",
-        "country": "法国",
-      },
-    ]
+
 
   },
 
@@ -75,24 +23,72 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-  // 点击按钮切换榜单
-  showButton: function () {
-    var that = this;
-    that.setData({
-      showView: true,
-      showView1: false,
-      bg: true,
+    that=this,
+    //搜索跳转请求
+    // wx.request({
+    //   url: 'https://go.zhangzw.top/web/search/index',
+    //   method: 'POST',
+    //   data: {
+    //     userid: wx.getStorageSync("userid"),
+    //     search: wx.getStorageSync("label"),
+    //   },
+    //   header: {
+    //     "content-type": "application/x-www-form-urlencoded"
+    //   },
+    //   success: function (e) {
+    //     console.log(e);
+    //     that.setData({
+    //       brand: e.data
+    //     })
+    //   }
+    // })
+
+
+    //搜索热词跳转请求
+    // wx.request({
+    //   url: 'https://go.zhangzw.top/web/search/index',
+    //   method: 'POST',
+    //   data: {
+    //     userid: wx.getStorageSync("userid"),
+    //     search: wx.getStorageSync("text "),
+    //   },
+    //   header: {
+    //     "content-type": "application/x-www-form-urlencoded"
+    //   },
+    //   success: function (e) {
+    //     // console.log(e);
+    //     that.setData({
+    //       brand: e.data
+    //     })
+    //   }
+    // })
+
+    // //第三分类跳转请求
+    // // if (wx.getStorageSync("that.data.searchValue ") || wx.getStorageSync("label ") || wx.getStorageSync("text ")){
+    // //   wx.
+    // // }
+    wx.request({
+      url: 'https://go.zhangzw.top/web/search/index',
+      method: 'POST',
+      data: {
+        search: wx.getStorageSync("label"),
+        userid: wx.getStorageSync("userid"),
+      },
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success: function (e) {
+        console.log(e);
+        that.setData({
+          brand: e.data
+        })
+      }
     })
+
+ 
+
   },
-  showButton1: function () {
-    var that = this;
-    that.setData({
-      showView: false,
-      showView1: true,
-      bg: false,
-    })
-  },
+ 
   //关注和已关注
   btnClick: function (e) {
     var that = this;
@@ -139,6 +135,7 @@ Page({
    */
   onShow: function () {
 
+    
   },
 
   /**
@@ -199,6 +196,6 @@ Page({
         mask: true
       });
     }
-    // console.log(e);
+    // console.log(e.currentTarget.dataset.detail);
   },
 })

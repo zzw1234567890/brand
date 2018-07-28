@@ -10,12 +10,15 @@
     <view class='tap' bindtap="suo">搜索</view>
   </view>
 
-  <view class="hot">
+  <view class='none' hidden='{{none}}'>
+    <text class='no'>没有找到搜索的内容...</text>
+  </view>
+
+  <view class="hot" hidden='{{view}}'>
     <view class="ci">热搜</view>
     <view class="res">
-    <button class="btn" wx:for="{{array}}" wx:key="*this">{{item.keyword}}</button>
+      <view class="btn" data-text="{{item.name}}" wx:for="{{array}}" wx:key="*this" bindtap="hotSearch">{{item.name}}</view>
     </view>
   </view>
 
-<view class="history"></view>
 </view>

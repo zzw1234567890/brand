@@ -125,7 +125,7 @@ Page({
       ]
     });
 
-    //分享
+    //d
     if (options.id >= 0) {
       // console.log(options.id)
       wx.request({
@@ -305,6 +305,7 @@ Page({
   //大分类跳转
   home: function(e) {
     // that = this;
+  
    var navNumber = e.currentTarget.dataset.id;
     wx.setStorageSync('navNumber', navNumber)
     wx.navigateTo({

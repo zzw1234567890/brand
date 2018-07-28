@@ -1,28 +1,27 @@
 <view class="container">
 
   <view class="btn">
-    <button class="one {{bg?'bg' : ''}}" bindtap='showButton'>Top10</button>
-    <button class="two {{bg?'' : 'bg'}}" bindtap='showButton1'>投票榜</button>
+    <button class="one">Top10榜单</button>
   </view>
 
   <!-- top10开始-->
-  <view class="top10 {{showView?'show':'hide'}}">
-    <view class="top" wx:for="{{brand}}" wx:for-index="index" wx:key='*this'>
-      <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
+  <view class="top10">
+    <view class="top" wx:for="{{brand}}"  wx:for-index="index" wx:key='*this'>
+      <image class="logo" src='{{item.img}}' data-index='{{index}}' bindtap='previewImg' />
       <view class="you" >
         <view class="title">
-          <text class="title" bindtap='touch'>{{item.title}}</text>
+          <text class="title" data-detail='{{item}}' bindtap='touch'>{{item.name}}</text>
           <image class="trend" src="{{item.trend}}"></image>
           <button class="guanzhu" bindtap='btnClick'>
             <text class='gz' hidden='{{yview}}'>+ 关注</text>
             <text class='gz' hidden='{{view}}'>已关注</text>
           </button>
         </view>
-        <view class="age" bindtap='touch'>
-          <text class="age">品牌年龄：{{item.age}}</text>
+        <view class="age" data-detail='{{item}}' bindtap='touch'>
+          <text class="age">品牌年龄：{{item.brand_create_time}}</text>
         </view>
-        <view class="nation" bindtap='touch'>
-          <text class="nation">所属地址：{{item.nation}}</text>
+        <view class="nation" data-detail='{{item}}' bindtap='touch'>
+          <text class="nation">所属地址：{{item.brand_create_address}}</text>
         </view>
         <view class="biao">
 
@@ -42,68 +41,33 @@
 
   </view>
 
-  <!--投票榜开始  -->
-  <view class="top10 {{showView1?'show':'hide'}}">
-    <view class="top" wx:for="{{brand1}}" wx:for-index="index" wx:key='*this'>
-      <image class="logo" src='{{item.pic}}' data-index='{{index}}' bindtap='previewImg' />
-      <view class="you" >
-        <view class="title">
-          <text class="title" bindtap='touch'>{{item.title}}</text>
-          <image class="trend" src="{{item.trend}}"></image>
-          <button class="guanzhu" bindtap='btnClick'>
-            <text class='gz' hidden='{{yview}}'>+ 关注</text>
-            <text class='gz' hidden='{{view}}'>已关注</text>
-          </button>
-        </view>
-        <view class="age" bindtap='touch'>
-          <text class="age">品牌年龄：{{item.age}}</text>
-        </view>
-        <view class="nation" bindtap='touch'>
-          <text class="nation">所属地址：{{item.nation}}</text>
-        </view>
-        <view class="biao">
-
-
-          <button class="middle">
-            <image class='share' src='/img/share.png'></image>
-            <text class='t-share'>分享</text>
-          </button>
-
-          <button class="tou">
-            <image class='share' src='/img/tou.png'></image>
-            <text class='toup'>投票</text>
-          </button>
-        </view>
-      </view>
-    </view>
-  </view>
-
+  
 <!-- 弹出框 -->
-  <view class='s-float' hidden="{{sview}}" wx:for="{{detail}}" wx:for-index="index" wx:key='*this'>
+  <view class='s-float' hidden="{{sview}}"  wx:for-index="index" wx:key='*this'>
   <view class='showview'>
     <view class='s-top'>
       <view class='s-logo'>
-        <image class='s-pic' src='{{item.pic}}'></image>
+        <image class='s-pic' src='{{detail.img}}'></image>
       </view>
       <view class='s-detail'>
         <view class='s-name'>
-          <text class='sName'>{{item.brandName}}</text>
+          <text class='sName'>{{detail.name}}</text>
         </view>
         <view class='s-company'>
-          <text class='sCompany'>{{item.companyName}}</text>
+          <text class='sCompany'>{{detail.company}}</text>
         </view>
         <view class='s-other'>
           <view class='s-left'>
-            <text class='other'>品牌年龄：{{item.age}}</text>
+            <text class='other'>品牌年龄：{{detail.brand_create_time}}</text>
           </view>
           <view class='s-right'>
-            <text class='other'>所属地址：{{item.country}}</text>
+            <text class='other'>所属地址：{{detail.brand_create_address}}</text>
           </view>
         </view>
       </view>
     </view>
     <view class='s-middle'>
-      <text class='s-paper'>{{item.brandDetail}}</text>
+      <text class='s-paper'>{{detail.introduction}}</text>
     </view>
   </view>
 </view>
