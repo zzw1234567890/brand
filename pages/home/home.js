@@ -26,7 +26,7 @@ Page({
       curNav: id,
       curIndex: e.currentTarget.dataset.index
     });
-
+    wx.setStorageSync('id',id)
     //三级分类请求   
 
     Index = that.data.curIndex
@@ -72,13 +72,6 @@ Page({
  * 生命周期函数--监听页面初次渲染完成
  */
   onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     that = this;
     // console.log(id);
     //二级分类请求
@@ -92,7 +85,7 @@ Page({
       success: function (e) {
         // console.log(e)
         wx.setStorageSync("id", e.data[0].id)
-        that.setData({navList:e.data});
+        that.setData({ navList: e.data });
         wx.request({
           url: 'https://go.zhangzw.top/web/type/getthirdtype',
           method: 'POST',
@@ -100,7 +93,7 @@ Page({
             second_id: wx.getStorageSync("id")
           },
           header: { "content-type": "application/x-www-form-urlencoded" },
-          
+
           success: function (e) {
             // console.log(e)
             var curIndex = that.data.curIndex
@@ -113,6 +106,14 @@ Page({
         })
       }
     });
+    console.log(123);
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
     
   },
 
