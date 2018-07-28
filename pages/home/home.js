@@ -1,5 +1,4 @@
 // pages/home/home.js
-
 var that;
 var Index;
 // var index0;
@@ -74,14 +73,10 @@ Page({
   },
   onLoad: function (e) {
     
-
   },
   selectNav: function (e) {
     that = this;
-    console.log(e)    
     id = e.currentTarget.dataset.id;
-    // that.setData({iindex:e.currentTarget.dataset.index});
-    // console.log(index)
     that.setData({
       curNav: id,
       curIndex: e.currentTarget.dataset.index
@@ -90,7 +85,6 @@ Page({
     //三级分类请求   
 
     Index = that.data.curIndex
-    // third = that.data.dishesList[Index];
     wx.request({
 
       url: 'https://go.zhangzw.top/web/type/getthirdtype',
@@ -104,8 +98,6 @@ Page({
         that.setData({ [key]: e.data });
       }
     })
-
-
   },
 
 

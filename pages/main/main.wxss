@@ -4,15 +4,12 @@
   margin: 0;
   padding: 0;
   background: #f6f6f6;
-  /* background: #166fb4 */
 }
 
 .progress {
   width: 100%;
   height: 30%;
-  /* background: linear-gradient(red, blue); *//* 线性渐变 - 从上到下（默认情况下）   *//* background: linear-gradient(to right, red , blue); *//* 线性渐变 - 从左到右 *//* background: linear-gradient(to bottom right, red , blue); *//* 线性渐变 - 对角 *//* background: linear-gradient(120deg, red, blue); *//* 带有指定的角度的线性渐变 */
   background: linear-gradient(#166fb4, blue, lightblue);
-  /* 带有多个颜色结点的从上到下的线性渐变 *//* background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);  *//* background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); *//* background: repeating-linear-gradient(#166fb4, lightblue 10%, blue 20%);  *//* background: radial-gradient(#166fb4, lightblue, blue);  *//* background: radial-gradient(#166fb4 5%, lightblue 15%, blue 60%);  *//* background: radial-gradient(circle, #166fb4, lightblue, blue);  *//* background: repeating-radial-gradient(#166fb4, lightblue 10%, blue 15%); *//* background: #f6f6f6; */
 }
 
 .main {
@@ -31,13 +28,11 @@
 .header {
   width: 100%;
   height: 160rpx;
-  /* background: rgba(0, 0, 0,0.3) */
 }
 
 .pic {
   width: 160rpx;
   height: 160rpx;
-  /* background: pink; */
   float: left;
 }
 
@@ -52,7 +47,6 @@
   width: 74%;
   height: 160rpx;
   line-height: 160rpx;
-  /* background: yellow; */
   float: left;
   text-align: center;
 }

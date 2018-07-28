@@ -29,7 +29,7 @@
       </view>
       <view class='f-main'>
         <text class='sthing other'>您已参与测试</text>
-        <text class='sthing others'>{{done}}次</text>
+        <text class='sthing others'>{{count}}次</text>
         <text class='sthing'>测试完可以保存结果哦~</text>
       </view>
       <view class='f-btn'>

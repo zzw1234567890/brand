@@ -7,6 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cishu: 3,
+    mask: true,
+    result2: true,
+    sview: false,
+    name: "是小扣啊.",
+    result: "0%",
+    button: false,
     startX: 0, //开始移动时距离左
     endX: 0, //结束移动时距离左
     nowPage: 0, //当前是第几个个页面
@@ -14,9 +21,8 @@ Page({
     // progress: 0,
     isSelect: false,
     textindex: 0,
-    num:0,
-    record:13,
-    // key:[],
+    num: 0,
+    record: 13,
   },
 
   /**
@@ -25,24 +31,38 @@ Page({
   onLoad: function (e) {
     that = this;
     wx.request({
+      url: 'https://go.zhangzw.top/web/problem/maxrecord',
+      data: {
+        userid: wx.getStorageSync("userid"),
+      },
+      method: "POST",
+      header: { "content-type": "application/x-www-form-urlencoded" },
+      success: function (e) {
+        that.setData({
+          record: e.data.record,
+          name: e.data.name
+        })
+        // console.log(e.data)
+      }
+    })
+
+    wx.request({
       url: 'https://go.zhangzw.top/web/problem/getproblem',
       data: {
         userid: wx.getStorageSync("userid"),
         start: 1,
-        // progress: that.data.progress
       },
       method: "POST",
       header: { "content-type": "application/x-www-form-urlencoded" },
       success: function (e) {
         var data = [];
-        // var Key=[];
         for (var j = 0; j < e.data.length; j++) {
           data[j] = {};
           data[j].area = [];
-          // data[j].key=;
           for (var i = 0; i < 4; i++) {
             data[j].area[i] = {};
             data[j].problem = e.data[j].problem;
+            data[j].record_id = e.data[j].record_id;
             data[j].scale = e.data[j].scale;
             data[j].display = e.data[j].display;
             data[j].slateX = e.data[j].slateX;
@@ -53,8 +73,10 @@ Page({
             data[j].area[i].brandName = e.data[j].option_text[i];
             data[j].area[i].class = 'selection1';
           }
+          wx.setStorageSync('record_id', data[j].record_id)
+
+          // console.log(data[j].record_id)          
         }
-        // console.log(data)
         that.setData({ text: data });
         that.setData({ textindex: 0 });
         that.checkPage(that.data.nowPage);
@@ -107,16 +129,40 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (e) {
+    if (e.from != "menu") {
+      return {
+        title: "品牌测试",
+        imageUrl: "../../img/tu.png",
+        path: "/pages/mian/mian"
+      }
+    } else {
+      return {
+        title: "品牌 Top",
+        imageUrl: '../../img/brand1.jpg',
+        path: "/pages/main/mian",
+      }
+    }
   },
   /////////////////////////////////////////
   //手指触发开始移动
   moveStart: function (e) {
-    var startX = e.changedTouches[0].pageX;
-    this.setData({
-      startX: startX
-    });
+    if (this.data.cishu > 1) {
+      var startX = e.changedTouches[0].pageX;
+      this.setData({
+        startX: startX
+      });
+      this.data.cishu -= 1;
+    } else if (this.data.cishu == 1) {
+      setTimeout(function () {
+        wx.showModal({
+          title: '提示',
+          content: '您今天的次数已用完啦',
+        })
+      }, 1000)
+      that.setData({ button: true })
+      this.data.cishu -= 1;
+    }
   },
   //手指触摸后移动完成触发事件
   moveItem: function (e) {
@@ -127,16 +173,11 @@ Page({
       endX: endX
     });
     if (that.data.nowPage >= (that.data.text.length - 1)) {
-      // wx.showToast({
-      //   title: '最后一题目了喔,明天再来吧',
-      //   icon: 'none'
-      // })
       wx.request({
         url: 'https://go.zhangzw.top/web/problem/getproblem',
         data: {
           userid: wx.getStorageSync("userid"),
-          start: 1,
-          // progress: that.data.progress
+          record_id: wx.getStorageSync("record_id"),
         },
         method: "POST",
         header: { "content-type": "application/x-www-form-urlencoded" },
@@ -145,7 +186,6 @@ Page({
           for (var j = 0; j < e.data.length; j++) {
             data[j] = {};
             data[j].area = [];
-            // data[j].key=;
             for (var i = 0; i < 4; i++) {
               data[j].area[i] = {};
               data[j].problem = e.data[j].problem;
@@ -160,16 +200,12 @@ Page({
               data[j].area[i].class = 'selection1';
             }
           }
-          // console.log(data)
           data = that.data.text.concat(data)
           that.setData({ text: data });
-          // that.setData({ textindex: 0 });
-          // that.data.nowPage = 0;
-          // console.log(that.data.text)
           that.checkPage(that.data.nowPage);
+          // console.log(123);
         }
-      })
-      return;      
+      });
     }
     that.setData({
       nowPage: that.data.nowPage + 1,
@@ -252,9 +288,6 @@ Page({
     var select = e.currentTarget.dataset.index;
     // console.log(that.data.text[that.data.textindex].area[select])
     that = this;
-    // that.setData({
-    //   isSelect: false
-    // })
     // 选项没被选择时将执行  
     if (!that.data.isSelect) {
       // 将选项设置为“已被选择”  
@@ -269,21 +302,42 @@ Page({
         setTimeout(function () {
           that.moveItem(e);
           that.setData({
-            isSelect: false
+            isSelect: false,
+            num: that.data.num + 1
           })
         }, 800)
       } else {
         Text.area[select].class = "selection2";
         Text.area[Text.key].class = "selection3";
+        // console.log(that.data.num)
         setTimeout(function () {
-          wx.switchTab({
-            url: "../main/main"
+          wx.request({
+            url: 'https://go.zhangzw.top/web/problem/getresult',
+            data: {
+              userid: wx.getStorageSync("userid"),
+              result: that.data.num,
+            },
+            method: "POST",
+            header: { "content-type": "application/x-www-form-urlencoded" },
+            success: function (e) {
+              console.log(e.data)
+              that.setData({ result: e.data.result })
+              that.setData({
+                mask: false,
+                result2: false,
+                sview: true,
+              })
+            }
           })
-        }, 2000)
+        }, 3000)
       }
       that.setData({ text: that.data.text });
     }
-    // console.log(that.data.isSelect)
     return;
   },
+  touch: function () {
+    wx.switchTab({
+      url: '../main/main',
+    })
+  }
 })

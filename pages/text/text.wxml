@@ -1,5 +1,5 @@
 <!--pages/text/text.wxml-->
-<view class="container">
+<view class="container" hidden='{{sview}}'>
   <view class='progress'>
     <view class='box'>
       <view class='my'>
@@ -34,8 +34,38 @@
   </view>
   <view class='footer'>
     <view class='foot'>
-      <button class='sumbit' type='button' bindtap="moveItem" bindtouchstart="moveStart">换一题</button>
-      <text class='info'>不认识？戳这里有提示哦~</text>
+      <button class='sumbit' type='button' disabled='{{button}}' bindtap="moveItem" bindtouchstart="moveStart">换一题</button>
+      <text class='info'>每天最多可换3次哦~</text>
     </view>
   </view>
+</view>
+<view class='result' hidden='{{result2}}'>
+  <view class='rTop'>
+    <view class='rName'>
+      <text class='r-name'>{{name}}</text>
+      <text class='r-title'>您本轮总共答对</text>
+      <text class='num3'>{{num}}</text>
+      <text class='r-title'>道题目</text>
+    </view>
+  </view>
+  <view class='reason'>
+    <view class='r-main'>
+      <text class='r-con'>你是个对美妆品牌超级熟悉的妹子，巴拉巴拉哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩不聊了吧巴拉巴拉哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩不聊了吧你是个对美妆品牌超级熟悉的妹子</text>
+      <text class='r-con'>你是个对美妆品牌超级熟悉的妹子，巴拉巴拉哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩不聊了吧巴拉巴拉哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩哔哩不聊了吧你是个对美妆品牌超级熟悉的妹子</text>
+    </view>
+  </view>
+  <view class='rBate'>
+    <view class='r-rate'>
+      <text class='tell'>您已成功超越全国</text>
+      <text class='per'>{{result}}</text>
+      <text class='tell'>的人</text>
+    </view>
+    <view class='rfoot'>
+      <button class='r-button' type='button' open-type='share'>
+        <image class='r-pic' src='../../img/zhuan.png'></image>
+      </button>
+    </view>
+  </view>
+</view>
+<view class='mask' bindtap="touch" hidden='{{mask}}'>
 </view>
